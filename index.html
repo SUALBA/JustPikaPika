@@ -3,109 +3,76 @@
 <head>
     <title>JustPikaPika</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-      <style>
-           .title {
-            font-family: 'Arial', sans-serif;
-            font-size: 48px;
-            color: #91D975;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-            background-image: linear-gradient(to right, #FF9B9D, #FAC4C8);
-            display: inline-block;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-            background-size: 200% 100%;
-            animation: gradientAnimation 40s ease infinite;
-        }
-
-            @keyframes gradientAnimation {
-                0% {
-                background-position: 100% 50%;
-            }
-                50% {
-                background-position: 0% 50%;
-            }
-                100% {
-                background-position: 100% 50%;
-            }
-        }
-
-            @keyframes pulseAnimation {
-                0% {
-                transform: scale(1);
-            }
-                50% {
-                transform: scale(1.05);
-            }
-                100% {
-                transform: scale(1);
-            }
-        }
-
-        .title:hover {
-            animation: pulseAnimation 1.0s ease-in-out infinite;
-        }
-
-
-
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .title {
-            font-size: 32px;
-            color: #6CBA59;
-            text-align: center;
-        }
-        #search-bar {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        #recipe-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-        }
-        .recipe {
-            border: 1px solid #DDD;
-            padding: 20px;
-        }
-        .recipe h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .recipe p {
-            margin: 0;
-        }
-        .recipe img {
-            width: 100%;
-            max-height: 200px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-    </style>
+     
 </head>
 
 <body>
     <header>
            <div class="container">
             <h1 class="title">JustPikaPika</h1>
+            <h2>Tus recetas fáciles y rápidas.</h2>
             <nav>
                 <ul>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="recipe.html">Recetas</a></li>
                     <li><a href="#">Favoritos</a></li>
-                    <li><a href="#">Comunidad</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="https://www.instagram.com/justpikapika/">Comunidad</a></li>
+                    <li><a href="mailto: contact.justpikapika@gmail.com">Contacto ✉</a></li>
+                    
                 </ul>
             </nav>
+           
+        
+            <div class="photo-row">
+                <div class="photo">
+                  <img src="./images/pastaenmesa.avif" alt="Past">
+                  
+                </div>
+                <div class="photo">
+                  <img src="./images/carne brasa.avif" alt="CArne a la brasa">
+                  
+                </div>
+                <div class="photo">
+                  <img src="./images/pescadoentabla.avif" alt="Pescado Azul">
+                 
+                </div>
+                <div class="photo">
+                  <img src="./images/verdurasencaja.avif" alt="verdurasencaja">
+                  
+                </div>
+                <div class="photo">
+                  <img src="./images/frutascaen.avif" alt="Frutas">
+                
+                </div>
+              </div>
+           
+  
+       <div id="ingredient-selector">
+        
+        <ul id="ingredient-list">
+          <li class="ingredientes" data-familia="pasta">Pasta</li>
+          <li class="ingredientes" data-familia="carne">Carne</li>
+          <li class="ingredientes" data-familia="pescado">Pescado</li>
+          <li class="ingredientes" data-familia="verduras">Verduras</li>
+          <li class="ingredientes" data-familia="frutas">Frutas</li>
+          
+        </ul>
+        
+      </div>
+      <h2>Selecciona los ingredientes  y obten una lista ampliada:</h2>
+      
+      <div id="lista-ampliada"></div>
+
+  
+  <div id="recetas">
+    <h2>Recetas disponibles:</h2>
+    <ul id="receta-list">
+      <!-- Aquí se mostrarán las recetas dinámicamente -->
+    </ul>
+  </div>
+            
             <div id="search-bar">
+             <!--    <button onclick="searchRecipes()">Buscar Recetas</button>   -->
                 <input type="text" id="search-input" placeholder="Buscar recetas">
                 <button id="search-button">Buscar</button>
             </div>
@@ -120,9 +87,14 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>© 2023 JustPikaPika. Susana Alba. Todos los derechos reservados.</p>
+        <div class="container">.
+            <p><a href="https://www.instagram.com/justpikapika/" class="instagram" title="Instagram">Instagram</a></p>
+            <p><a href="https://www.facebook.com/Supercook-Spain-España-425883334282568/?fref=ts" class="facebook" title="Facebook">Facebook</a></p>
+            <p><a href="/es/supercook/content/imprint/" class="third">Aviso legal</a></p>
+            <p><a href="/es/supercook/content/privacy/" class="last">Política de privacidad</a></p>     
+            <p>© 2023 JustPikaPika.By Susana Alba. Todos los derechos reservados.</p>
         </div>
+        
     </footer>
 
     <script src="script.js"></script>

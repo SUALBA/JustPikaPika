@@ -1,31 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Details</title>
+  <style>
+    body {
+        
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
+        background-size: cover;
+        background-repeat: no-repeat; 
+        font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #333;   
+      }
+        #recipe-title{
+          background-color:#6CBA59 ;
+          border: 3px solid #FF9B9D;
+          border-radius: 5px;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+          text-align: center;
+        }
+        #ingredient-list{
+          font-size: 16px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          border:5px solid #6CBA59;
+        }
+        #instructions-list{
+          font-size: 16px;
+          color: #333;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          border:5px solid #6CBA59;
+        
+        }
+
+</style>
+</head>
+<body>
+  <h1 id="recipe-title"></h1>
+  <h2>Ingredients:</h2>
+  <ul id="ingredient-list"></ul>
+  <h2>Instructions:</h2>
+  <ol id="instructions-list"></ol>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<input id="search" ><button onclick="getrecepe(document.getElementById('search').value)">Search.</button>
-<div id="output"></div>
-<a href="" id="sourceLink"></a>
-
-
-<script>
-function getsource(id){
-$.ajax({
-url:"https://api.spoonacular.com/recipes/"+id+"/Information?apikey-db254b5cd61744d39a2deebd9c361444",
-success: function(res){
-document.getElementById("sourceLink").innerHTML=res.sourceUrl
-document.getElementById("sourceLink").href=res.sourceUrl
-}
-});
-
-}
-function getrecepe(q){
-$.ajax({
-url:"https://api.spoonacular.com/recipes/search?apiKey=aac38ef2db854c74b8b9f59ac48acbf6&number=1&query="+q,
-success: function(res){
-document.getElementById("output").innerHTML = "<h1>" + res.results[0].title + "</h1><br><img src='" + res.baseUri + res.results[0].image + "' width='400'   /><br>ready in " + res.results[0].readyInMinutes + " minutes";
-
-getsource(res.results[0].id)
-}
-})
-}
-</script>
+  <script src="recipe.js"></script>
+</body>
+</html>

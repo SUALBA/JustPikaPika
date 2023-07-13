@@ -65,7 +65,8 @@ h2 {
     margin-top: 5px;
     color:#daa9aa;
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   
   }
 
 nav {
@@ -73,6 +74,7 @@ nav {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    
 }
 
 nav ul {
@@ -81,10 +83,12 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content:space-between;
+    
 }
 
 nav ul li {
     margin: 0 10px;
+    
 }
 
 nav ul li a {
@@ -93,12 +97,14 @@ nav ul li a {
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 nav ul li a:hover {
     background-color: #FF9B9D;
     color: #FFF;
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 h1{
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -146,14 +152,18 @@ h1{
 .ingredientes {
     cursor: pointer;
     text-align: center;
-    margin: 10px 100px;
+    margin: 10px 85px;
     flex: 1;
+    padding: 5px;
+    border: 5px solid rgb(169, 163, 163);
+    border-radius: 10px;
 }
 
 #ingredient-selector {
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
+
   }
 
 #ingredient-list {
@@ -242,7 +252,7 @@ ul {
     background-color: #549746;
 }
 
-#recipe-list {
+#receta-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -277,6 +287,19 @@ ul {
     margin: 0;
     color: #FF9B9D;
 }
+
+
+.favorite-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .favorite-button img {
+    width: 24px;
+    height: 24px;
+  }
 
 footer {
     background-color: #444;

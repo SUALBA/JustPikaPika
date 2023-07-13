@@ -2,7 +2,9 @@
 <html>
 <head>
     <title>JustPikaPika</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" defer>
+    
+
      
 </head>
 
@@ -14,13 +16,14 @@
             <nav>
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="recipe.html">Recetas</a></li>
-                    <li><a href="#">Favoritos</a></li>
+                    <li><a href="recipe.html">Diet Recetas</a></li>
+                    <li><a href="favorite.html">Favoritos</a></li>
                     <li><a href="https://www.instagram.com/justpikapika/">Comunidad</a></li>
                     <li><a href="mailto: contact.justpikapika@gmail.com">Contacto ✉</a></li>
                     
                 </ul>
-            </nav>
+          
+              </nav>
            
         
             <div class="photo-row">
@@ -46,7 +49,7 @@
                 </div>
               </div>
            
-  
+      <h2>Selecciona los ingredientes  y obten una lista ampliada:</h2>
        <div id="ingredient-selector">
         
         <ul id="ingredient-list">
@@ -59,7 +62,7 @@
         </ul>
         
       </div>
-      <h2>Selecciona los ingredientes  y obten una lista ampliada:</h2>
+     
       
       <div id="lista-ampliada"></div>
 
@@ -70,21 +73,16 @@
       <!-- Aquí se mostrarán las recetas dinámicamente -->
     </ul>
   </div>
+  
             
             <div id="search-bar">
              <!--    <button onclick="searchRecipes()">Buscar Recetas</button>   -->
-                <input type="text" id="search-input" placeholder="Buscar recetas">
+                <input type="text" id="search-input" placeholder="">
                 <button id="search-button">Buscar</button>
             </div>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <h2>Recetas</h2>
-            <div id="recipe-list"></div>
-        </div>
-    </main>
 
     <footer>
         <div class="container">.

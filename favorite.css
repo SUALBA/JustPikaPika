@@ -2,30 +2,42 @@
           
           max-width: 1200px;
           margin: 0 auto;
-          padding: 20px;
-          background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
-          background-size: cover;
-          background-repeat: no-repeat;  }
-          .card {
-             position: absolute;
-             width: 240px;
+          padding: 40px;
+          background-color: #FFE29B;
+         
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+      .card {
+             
+             width: 350px;
              height: auto;
-             background-image: url("images/pink-flower.jpg");
+             background-image: url("images/pink-flowerFav.jpg");
              background-size: cover;
              background-repeat: no-repeat;
              background-position: center center;
-             padding: 10px;
-             border-radius: 5px;
-             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-             cursor: move;
+             padding: 40px;
+                         
           }
        h1{
             font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: #AD3565
+            color: #AD3565;
+            font-size: 50px;
+            background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
           }
           .card-content {
-             margin: 0px 0px 2px 55px;
-             padding: 0px;
+            margin: 0px 0px 2px 55px;
+            padding: 45px;
             font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
             color:#AD3565;
                          
@@ -67,7 +79,7 @@
           margin: 20px auto;
           text-align: center;
           background-color: pink;
-          color: white;
+          color: rgb(141, 137, 137);
           padding: 10px 20px;
           border-radius: 5px;
           cursor: pointer;
@@ -82,7 +94,7 @@
           }
           
           .card {
-            background-color: #fff;
+            background-color: #FFE29B;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

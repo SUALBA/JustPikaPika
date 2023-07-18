@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
    // Función para mostrar una confirmación antes de eliminar todas las recetas favoritas
-   function removeFavoritesConfirmation() {
+  function removeFavoritesConfirmation() {
     const confirmDelete = confirm('¿Estás seguro de que deseas eliminar todas las recetas favoritas?');
 
     if (confirmDelete) {

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Form</title>
+    
+    <style>
+        * {
+           
+            background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
+            background-repeat: no repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size:auto ;
+        }
+        
+        #sharerecipe {
+            font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 10px auto;
+            background: #f6696b;
+            font-size: 14px;
+            width: 100%;
+            max-width: 700px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 13px solid #91D975;
+            background-color: #91D975;
+            color:#f6696b;
+        }
+        
+          label {
+                display: block;
+                font-size: 20px;
+                padding: 0px;
+                color:#6980c7 ;
+                text-shadow: 1px 1px 1px #6980c7;
+                
+        }
+        
+          input {
+                display: block;
+                font-size: 18px;
+                padding:  5px;
+        }
+          h3 {
+            
+                font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+                margin: px auto;
+                font-size: 16px;
+        }
+        textarea {
+        resize: vertical; /* Permite ajustar la altura verticalmente */
+        max-height: 10em; /* Altura máxima de 10 líneas (puedes ajustar este valor según el tamaño de línea deseado) */
+        width: 85%;
+        font-size: 14px;
+                }
+       
+        .btn{
+            width: 180px;
+            height: 50px;
+            border-radius: 10px;
+            color:#ed4e51;
+           }
+        .mensaje-emergente {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }    
+       
+        </style>
+</head>
+<body>
+  
+
+
+    <div id="contain">
+    <div id="sharerecipe">
+        <h1> Share your recipes</h1>
+      
+    <form action="https://formsubmit.co/2a8b875d492fba60c648bb983b4d6332" method="POST" id="recipe-form"> is
+      <input type="hidden" name="_formsubmit_id" value="2a8b875d492fba60c648bb983b4d6332">
+      <label for="full-name">Name and surname:</label>
+      <input type="text" name="Send your recipes: Name" id="full-name" placeholder="Name and surname" required="">
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="your contact email "  />
+      <label for="telephone">Telefono number:</label>
+      <input type="telephone" name="Telefono number" id="telephone" placeholder="(655-555-555)">
+      <label>City and Country </label>
+      <input type="text" name="city and country" placeholder="city and country"/>
+      <label>Are you a member of the JustPikaPikaTeam?:</label>
+      <input type="checkbox" name="teamJustpikapika" value="yes"> <span>Yes</span> 
+      <input type="checkbox" name="teamJustpikapika" value="no">  <span>No</span>
+      <label for="name recipe">Recipe name:</label>
+      <input type="name" name="recipe name" placeholder="the name of your recipe "/>
+      <label> Ingredients needed for the recipe</label>
+      <textarea name="ingredients" rows="7" maxlength="250" placeholder="Ingredients needed"></textarea>
+      <label>Your secret for this recipe </label>
+      <textarea name="message" rows="10" maxlength="500" placeholder="Enter your secret for this recipe, how do you cook it turns out great!! ( max 500 words)"></textarea>
+    
+      <h3>✅ I agree to receive commercial information, including by email.</h3>
+      <h3>✅ I have read and accept the <router-link to="/politica_privacidad" >privacy policy </router-link> </h3>
+      
+      <button class="btn btn-success-border-subtle " id="my-form-button ">Agree and send</button>
+      
+      <div class="mensaje-emergente" id="mensaje">
+        ˚ ༘♡ ⋆｡˚Thanks for sharing something so delicious!! ˚ ༘♡ ⋆｡˚
+      </div>
+
+      <input type="hidden" name="_next" value="https://zippy-strudel-67b0fd.netlify.app/"> 
+      <input type="hidden" name="_captcha" value="false"> 
+    </form>
+    
+    </div>
+    </div>
+    <script>
+        // Función para mostrar el mensaje emergente al hacer clic en el botón
+        document.getElementById("my-form-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe al hacer clic en el botón
+
+            var mensajeEmergente = document.getElementById("mensaje");
+            mensajeEmergente.style.display = "block";
+        });
+    </script>
+
+
+</body>
+</html>

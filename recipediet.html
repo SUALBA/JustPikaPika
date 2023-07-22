@@ -1,55 +1,30 @@
-<!-- <!doctype html>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<input id="search" ><button onclick="getrecepe(document.getElementById('search').value)">Search.</button>
-<div id="output"></div>
-<a href="" id="sourceLink"></a>
-
-
-<script>
-function getsource(id){
-$.ajax({
-url:"https://api.spoonacular.com/recipes/"+id+"/Information?apikey-db254b5cd61744d39a2deebd9c361444",
-success: function(res){
-document.getElementById("sourceLink").innerHTML=res.sourceUrl
-document.getElementById("sourceLink").href=res.sourceUrl
-}
-});
-
-}
-function getrecepe(q){
-$.ajax({
-url:"https://api.spoonacular.com/recipes/search?apiKey=aac38ef2db854c74b8b9f59ac48acbf6&number=1&query="+q,
-success: function(res){
-document.getElementById("output").innerHTML = "<h1>" + res.results[0].title + "</h1><br><img src='" + res.baseUri + res.results[0].image + "' width='400'   /><br>ready in " + res.results[0].readyInMinutes + " minutes";
-
-getsource(res.results[0].id)
-}
-})
-}
-</script>     -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="favorite.css">   
-    <title>Recipe Diet</title>
+    <title>Recipes by Diet</title>
+    <link rel="stylesheet" type="text/css" href="recipediet.css">
 </head>
 <body>
-    
-</body>
-</html>
+    <header>
+        <h1>Recipes by Diet</h1>
+        <div class="buttons">
+                <button id="btnVegetarian">Vegetarian</button>
+                <button id="btnVegan">Vegan</button>
+                <button id="btnGlutenFree">Gluten Free</button>
+                <button id="btnKeto">Keto</button>
+                <button id="btnPescatarian">Pescatarian</button>
+                <button id="btnPaleolithic">Paleolithic</button>
+                <button id="btnPrimal">Primal</button>
+                <button id="btnWhole30">Whole 30</button>
+              
+        </div>
+    </header>
 
-<body>
-    <button class="btn-98">Button</button>
-    <button class="btn-98">Button</button>
-    <button class="btn-98">Button</button>
-    <button class="btn-98">Button</button>
+    <div id="recipe-list" class="cards">
+        <!-- Aquí se mostrarán las recetas dinámicamente -->
+    </div>
 
-
-
+    <script src="recipediet.js"></script>
 </body>
 </html>

@@ -85,7 +85,7 @@
     <div id="sharerecipe">
         <h1> Share your recipes</h1>
       
-    <form action="https://formsubmit.co/2a8b875d492fba60c648bb983b4d6332" method="POST" id="recipe-form"> is
+    <form action="https://formsubmit.co/2a8b875d492fba60c648bb983b4d6332" method="POST" id="recipe-form"> 
       <input type="hidden" name="_formsubmit_id" value="2a8b875d492fba60c648bb983b4d6332">
       <label for="full-name">Name and surname:</label>
       <input type="text" name="Send your recipes: Name" id="full-name" placeholder="Name and surname" required="">
@@ -101,14 +101,14 @@
       <label for="name recipe">Recipe name:</label>
       <input type="name" name="recipe name" placeholder="the name of your recipe "/>
       <label> Ingredients needed for the recipe</label>
-      <textarea name="ingredients" rows="7" maxlength="250" placeholder="Ingredients needed"></textarea>
+      <textarea name="ingredients" rows="7" maxlength="250" placeholder="Ingredients needed. If you have a photo of the recipe to a social network, you can share the link here."></textarea>
       <label>Your secret for this recipe </label>
       <textarea name="message" rows="10" maxlength="500" placeholder="Enter your secret for this recipe, how do you cook it turns out great!! ( max 500 words)"></textarea>
     
       <h3>✅ I agree to receive commercial information, including by email.</h3>
       <h3>✅ I have read and accept the <router-link to="/politica_privacidad" >privacy policy </router-link> </h3>
       
-      <button class="btn btn-success-border-subtle " id="my-form-button ">Agree and send</button>
+      <button class="btn btn-success-border-subtle" id="my-form-button ">Agree and send</button>
       
       <div class="mensaje-emergente" id="mensaje">
         ˚ ༘♡ ⋆｡˚Thanks for sharing something so delicious!! ˚ ༘♡ ⋆｡˚
@@ -125,7 +125,7 @@
         document.getElementById("my-form-button").addEventListener("click", function(event) {
             event.preventDefault(); // Evita que el formulario se envíe al hacer clic en el botón
 
-            var mensajeEmergente = document.getElementById("mensaje");
+            const mensajeEmergente = document.getElementById("mensaje");
             mensajeEmergente.style.display = "block";
         });
     </script>

@@ -1,14 +1,66 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #333;   
 }
 
-header {
-  background-color: #333;
-  color: #fff;
+#recipe-title {
+  background-color: #6CBA59;
+  border: 3px solid #FF9B9D;
+  border-radius: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+#ingredient-list {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 5px solid #6CBA59;
+}
+
+#instructions-list {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 5px solid #6CBA59;
+}
+
+.card {
+  background-color: #6CBA59; /* Color de fondo predeterminado */
+  border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 16px;
+  color: #333;
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 5px solid #6CBA59;
+}
+
+.card p {
+  margin: 0;
+  color: #FF9B9D;
 }
 
 .buttons {
@@ -26,38 +78,13 @@ button {
   cursor: pointer;
   font-size: 16px;
 }
-#recipe-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
 
-.recipe {
-  background-color: #dbf6d4;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.recipe h2 {
-  font-size: 16px;
-  color: #333;
-  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 10px;
-}
-
-.recipe img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border: 5px solid #6CBA59;
-}
-
-.recipe p {
-  margin: 0;
-  color: #FF9B9D;
-}
+/* Colores de los botones */
+button.vegetarian { background-color: #6CBA59; }
+button.vegan { background-color: #FF9B9D; }
+button.gluten-free { background-color: #FACD55; }
+button.keto { background-color: #8A55F7; }
+button.pescatarian { background-color: #55DFF7; }
+button.paleolithic { background-color: #FFA500; }
+button.primal { background-color: #FF726F; }
+button.whole-30 { background-color: #8AF755; }

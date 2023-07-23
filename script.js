@@ -7,6 +7,29 @@ document.addEventListener('DOMContentLoaded', function() {
     'frutas': ['Manzana', 'Plátano', 'Naranja', 'Fresa', 'Piña', 'Uva', 'Kiwi', 'Mango', 'Sandía', 'Melón']
   };
 
+  const loginLink = document.getElementById('login-link');
+  const loginModal = document.getElementById('login-modal');
+  const passwordInput = document.getElementById('password-input');
+  const loginBtn = document.getElementById('login-btn');
+
+  loginLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    loginModal.style.display = 'block';
+  });
+
+  loginBtn.addEventListener('click', function() {
+    const password = passwordInput.value;
+    // Para poder simular la validacion añado una contraseña  correcta q sera ("1234")
+    if (password === '1234') {
+      alert('Inicio de sesión exitoso');
+      // Redireccionar a la página de "recipediet.html" o realizar cualquier acción deseada
+      window.location.href = 'recipediet.html';
+    } else {
+      alert('"Invalid password, please try again.');
+    }
+  });
+
+
   const ingredientList = document.getElementById('ingredient-list');
   const listaAmpliada = document.getElementById('lista-ampliada');
   const searchInput = document.getElementById('search-input');
@@ -97,6 +120,62 @@ document.addEventListener('DOMContentLoaded', function() {
     return string.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Eliminar los caracteres acentuados
   }
 });
+
+//añado dia y hora en mi receta favorita para saber de q dia es la receta
+
+const dateDisplay = document.getElementById('dateDisplay');
+
+// Days of the week and months in English
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+// Get the current date
+const currentDate = new Date();
+
+// Get the date components
+const dayOfWeek = daysOfWeek[currentDate.getDay()];
+const day = currentDate.getDate();
+const month = months[currentDate.getMonth()];
+const year = currentDate.getFullYear();
+
+// Format the date
+const formattedDate = `${dayOfWeek}, ${month} ${day}, ${year}`;
+
+// Display the date on the page
+dateDisplay.textContent = formattedDate;
+
+
+
+//aqui añado la suscripcion al newsletter:
+function subscribe() {
+  const emailInput = document.getElementById('newsletter1');
+  const successMessage = document.getElementById('successMessage');
+
+  // Verifico si el campo de correo electrónico está vacío antes de mostrar el mensaje de éxito
+  if (emailInput.value.trim() !== '') {
+    // Aquí se agrega la lógica para enviar la solicitud de suscripción
+    // no hay llamada al servidor para manejar la suscripción.
+
+    // Estoy simulando una solicitud de suscripción 
+    setTimeout(() => {
+      successMessage.style.display = 'none';
+    }, 5000); // Ocultare el mensaje después de 5 segundos (5000 ms)
+
+    // Muestro el mensaje de éxito
+    successMessage.style.display = 'block';
+
+    // Limpio el campo de email después de la suscripción
+    emailInput.value = '';
+  }
+}
+//añado mensaje para About y Faqs
+function showPopup() {
+  alert("For any questions, please email us at contactjustpikapika@gmail.com");
+}
+//añado mensajes para Features
+function FeaturePopup() {
+  alert("Easy to use: Find delicious recipes with just a few clicks.Wide variety of recipes: Explore a diverse selection of recipes for all tastes. Save your favorites: Mark the recipes you love and access them easily. Share with friends: Share your favorite recipes on social media.");
+}
 
 
 

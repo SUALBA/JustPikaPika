@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>JustPikaPika</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" defer>
+    <link rel="stylesheet" type="text/css" href="styles.css" >
     <head><script src="../assets/js/color-modes.js"></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
    
 </head>
 
@@ -17,15 +17,21 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="recipediet.html">Diet Recipes</a></li>
+                    <li><a href="recipediet.html" id="login-link">Diet Recipes</a></li>
                     <li><a href="favorite.html">Favorites</a></li>
                     <li><a href="https://www.instagram.com/justpikapika/">Community</a></li>
                     <li><a href="recipesend.html">Share your recipes ✉</a></li>
                   
                 </ul>
+            </nav>
+            <div id="login-modal" class="modal">
+              <div class="modal-content">
+                <h4>Diet recipes are exclusively available to our Just PIKAPIKA members. Please enter your access code here: </h>
+                <input type="password" id="password-input" placeholder="Contraseña">
+                <button id="login-btn">Ingresar</button>
+              </div>
+            </div>
           
-              </nav>
-           
         
             <div class="photo-row">
                 <div class="photo">
@@ -88,13 +94,14 @@
     <div class="row">
       <div class="col-9">
         <h2>RECIPE OF THE DAY</h2>
-      </div>
-      <div class="col-4"><p>Sent by Elisa Alias from Barcelona</p><div class="card" style="width: 18rem;">
+        </div>
+        <div class="col-4"><p>Sent by Elisa Alias from Barcelona</p><div class="card" style="width: 18rem;">
+        <p><span id="dateDisplay"></span></p>
         <img src="./images/brownie.avif" class="card-img-top" alt="brownie" >
         <div class="card-body">
           <h5 class="card-title">Delicious Brownies</h5>
           <p class="card-text">Today the recipe of the day is some delicious brownies that Elisa sent us from Barcelona..</p>
-          <a href="recipesend.html" class="btn btn-success">Sent your recipe!</a>
+          <a href="recipesend.html" class="btn btn-success btn-sm">Sent your recipe!</a>
         </div>
         </div></div>
 
@@ -152,35 +159,44 @@
   <footer class="py-5">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>Sections</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="./recipediet.html" class="nav-link p-0 text-body-secondary">DietRecipes</a></li>
+          <li class="nav-item mb-2"><a href="./favorite.html" class="nav-link p-0 text-body-secondary">Favorites </a></li>
+          <li class="nav-item mb-2"><a href="https://www.instagram.com/justpikapika/" class="nav-link p-0 text-body-secondary">Community</a></li>
+          <li class="nav-item mb-2"><a href="recipesend.html" class="nav-link p-0 text-body-secondary">Share Recipe</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>Social networks</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" >
+            <img src="./images/twitter_logo.png" alt="logo Instagram" style="width: 40px;">
+            </a></li><li class="nav-item mb-2"><a href="https://www.instagram.com/justpikapika" class="nav-link p-0 text-body-secondary" >
+          <img src="./images/instagram_logo.png" alt="logo Instagram" style="width: 40px;">
+          </a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" >
+            <img src="./images/logoFacebook.jpg" alt="logo facebook" style="width: 40px;">
+            </a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" >
+              <img src="./images/TikTok-Logo.png" alt="TikTok-Logo" style="width: 40px;">
+              </a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" >
+                <img src="./images/Youtube-Logo.png" alt="logo youTube" style="width: 80px;">
+                </a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>Questions</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Politica de privacidad</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="mailto: contact.justpikapika@gmail.com" class="nav-link p-0 text-body-secondary">Contact ✉</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" onclick="FeaturePopup()">Features</a></li>
+          <li class="nav-item mb-2"><a href="politicadeprivacidad.html" class="nav-link p-0 text-body-secondary" >Privacy Policy</a></li>
+          <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary" onclick="showPopup()">FAQs</a></li>
+         <li class="nav-item mb-2"><a  class="nav-link p-0 text-body-secondary" onclick="showPopup()">About</a></li>
         </ul>
       </div>
 
@@ -190,21 +206,18 @@
           <p>Monthly digest of what's new and exciting from us.</p>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2">
             <label for="newsletter1" class="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-            <button class="btn btn-success" type="button">Subscribe</button>
+            <input id="newsletter1" type="email" class="subscribe-container__email" placeholder="Email address" required />
+            <button class="button" type="button btn" onclick="subscribe()" id="subscribeButton">Subscribe</button>
           </div>
-          
+          <p id="successMessage" style="display: none;">You have successfully subscribed !</p>
         </form>
       </div>
-    </div>
 
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>&copy; 2023 JustPikaPika.By Susana Alba . All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-      </ul>
+      <p>&copy; 2023 JustPikaPika.By Susana Alba.All rights reserved.</p>
+      <a href="https://github.com/SUALBA" target="_blank">
+        <img src="./images/github-mark-white.png" alt="logo github" width="25" height="25" style="filter: brightness(0.5)" title="SUALBA">
+    </a>
     </div>
   </footer>
 </div>

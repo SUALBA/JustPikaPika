@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
   const ingredientesEspecificos = {
-    'pasta': ['Spaghetti', 'Fettuccine', 'Lasaña', 'Ravioli', 'Tortellini', 'Macarrones', 'Canelones', 'Penne', 'Farfalle', 'Gnocchi'],
-    'carne': ['Pollo', 'Res', 'Cerdo', 'Pavo', 'Cordero', 'Ternera', 'Embutidos', 'Jamón', 'Salchicha', 'Chorizo'],
-    'pescado': ['Salmón', 'Trucha', 'Atún', 'Bacalao', 'Pargo', 'Lenguado', 'Merluza', 'Dorado', 'Rodaballo', 'Sardina'],
-    'verduras': ['Lechuga', 'Tomate', 'Pepino', 'Zanahoria', 'Pimiento', 'Espárrago', 'Espinaca', 'Calabacín', 'Cebolla', 'Brócoli'],
-    'frutas': ['Manzana', 'Plátano', 'Naranja', 'Fresa', 'Piña', 'Uva', 'Kiwi', 'Mango', 'Sandía', 'Melón']
-  };
+   'pasta': ['Spaghetti', 'Fettuccine', 'Lasagna', 'Ravioli', 'Tortellini', 'Macaroni', 'Cannelloni', 'Penne', 'Farfalle', 'Gnocchi'],
+  'carne': ['Chicken', 'Beef', 'Pork', 'Turkey', 'Lamb', 'Veal', 'Cold Cuts', 'Ham', 'Sausage', 'Chorizo', 'Meat'],
+  'pescado': ['Salmon', 'Trout', 'Tuna', 'Cod', 'Snapper', 'Sole', 'Hake', 'Dorado', 'Turbot', 'Sardine', 'Fish'],
+  'verduras': ['Lettuce', 'Tomato', 'Cucumber', 'Carrot', 'Pepper', 'Asparagus', 'Spinach', 'Zucchini', 'Onion', 'Broccoli'],
+  'frutas': ['Apple', 'Banana', 'Orange', 'Strawberry', 'Pineapple', 'Grape', 'Kiwi', 'Mango', 'Watermelon', 'Melon']
+};
 
+
+//logica para el cuadro de entrada a RecipeDiet
   const loginLink = document.getElementById('login-link');
   const loginModal = document.getElementById('login-modal');
   const passwordInput = document.getElementById('password-input');
@@ -28,8 +30,20 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('"Invalid password, please try again.');
     }
   });
+ //lógica si declina entrar
+ // Obtenemos una referencia al botón "Go out"
+const goOutBtn = document.getElementById("go-out-btn");
+// Agregamos el evento de clic al botón "Go out"
+goOutBtn.addEventListener("click", () => {
+  // Obtenemos una referencia al cuadro de conversación (modal)
+  const loginModal = document.getElementById("login-modal");
+  // Ocultamos el cuadro de conversación (modal)
+  loginModal.style.display = "none";
+});
 
 
+
+//logica para obtener las listas de alimentos
   const ingredientList = document.getElementById('ingredient-list');
   const listaAmpliada = document.getElementById('lista-ampliada');
   const searchInput = document.getElementById('search-input');

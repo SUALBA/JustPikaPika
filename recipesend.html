@@ -6,7 +6,7 @@
     <title>Recipe Form</title>
     
     <style>
-        * {
+        body {
            
             background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
             background-repeat: no repeat;
@@ -14,19 +14,22 @@
             background-position-y: center;
             background-size:auto ;
         }
+        #recipe-form{
+            background-color: rgb(201, 237, 148);
+        }
         
         #sharerecipe {
             font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
             margin: 10px auto;
-            background: #f6696b;
-            font-size: 14px;
+            background: #edadae;
+            font-size: 20px;
             width: 100%;
             max-width: 700px;
             box-sizing: border-box;
             border-radius: 10px;
-            border: 13px solid #91D975;
-            background-color: #91D975;
-            color:#f6696b;
+            border: 13px solid #9fe581;
+            background-color: #cce1c4;
+            color:#654c4d;
         }
         
           label {
@@ -34,7 +37,7 @@
                 font-size: 20px;
                 padding: 0px;
                 color:#198754 ;
-                text-shadow: 1px 1px 1px #6980c7;
+                
                 
         }
         
@@ -51,6 +54,7 @@
                 font-size: 16px;
         }
         textarea {
+        
         resize: vertical; /* Permite ajustar la altura verticalmente */
         max-height: 10em; /* Altura máxima de 10 líneas (puedes ajustar este valor según el tamaño de línea deseado) */
         width: 85%;
@@ -63,7 +67,10 @@
             border-radius: 10px;
             color:#ed4e51;
            }
-          
+         a{
+            font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 16px;
+         } 
        
         </style>
 </head>
@@ -73,8 +80,8 @@
 
     <div id="contain">
     <div id="sharerecipe">
-        <h1> Share your recipes</h1>
-      
+        <h1> 🌟 Share your recipes   </h1>
+    <!--he utilizado la API Formsubmit para recibir los datos que se envien de este formulario en mi email -->
     <form action="https://formsubmit.co/2a8b875d492fba60c648bb983b4d6332" method="POST" id="recipe-form"> 
       <input type="hidden" name="_formsubmit_id" value="2a8b875d492fba60c648bb983b4d6332">
       <label for="full-name">Name and surname:</label>
@@ -86,8 +93,8 @@
       <label>City and Country </label>
       <input type="text" name="city and country" placeholder="city and country"/>
       <label>Are you a member of the JustPikaPikaTeam?:</label>
-      <input type="checkbox" name="teamJustpikapika" value="yes"> <span>Yes</span> 
-      <input type="checkbox" name="teamJustpikapika" value="no">  <span>No</span>
+      <span>Yes</span> <input type="checkbox" name="teamJustpikapika" value="yes"> 
+      <span>No</span>↬↬↬↬↬★<a href="newmember.html">Sign Up</a><input type="checkbox" name="teamJustpikapika" value="no">  
       <label for="name recipe">Recipe name:</label>
       <input type="name" name="recipe name" placeholder="the name of your recipe "/>
       <label> Ingredients needed for the recipe</label>
@@ -96,14 +103,14 @@
       <textarea name="message" rows="10" maxlength="500" placeholder="Enter your secret for this recipe, how do you cook it turns out great!! ( max 500 words)"></textarea>
     
       <h3>✅ I agree to receive commercial information, including by email.</h3>
-      <h3>✅ I have read and accept the <router-link to="/politica_privacidad" >privacy policy </router-link> </h3>
-      
+      <h3>✅ I have read and accept the <a href="politicadeprivacidad.html" >Privacy Policy</a> </h3>
+     
       <button class="btn btn-success-border-subtle" id="my-form-button ">Agree and send</button>
       
-      <div class="mensaje-emergente" id="mensaje">
+      <div class="mensaje-emergente" id="mensaje"><strong>
         ˚ ༘♡ ⋆｡˚Thanks for sharing something so delicious!! ˚ ༘♡ ⋆｡˚
-      </div>
-
+      </strong></div>
+<!--He utilizado la plataforma NETLIFY para alojar mi web y desplegar la aplicacion-->
       <input type="hidden" name="_next" value="https://zippy-strudel-67b0fd.netlify.app/"> 
       <input type="hidden" name="_captcha" value="false"> 
     </form>
@@ -113,7 +120,7 @@
     <script>
         // Función para mostrar el mensaje emergente al hacer clic en el botón
         document.getElementById("my-form-button").addEventListener("click", function(event) {
-            event.preventDefault(); // Evita que el formulario se envíe al hacer clic en el botón
+            event.preventDefault();
 
             const mensajeEmergente = document.getElementById("mensaje");
             mensajeEmergente.style.display = "block";

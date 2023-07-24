@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     
 }
-
+/*estilo del cartel de justpikapika*/
 .title {
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -59,7 +59,7 @@ body {
 .title:hover {
     animation: pulseAnimation 1.0s ease-in-out infinite;
 }
-
+/*estilo de la frase eslogan*/
 h2 {
     margin-bottom: 15px;
     margin-top: 5px;
@@ -68,7 +68,7 @@ h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
    
   }
-
+/*estilo de la barra de navegación*/
 nav {
     background-color: #91D975;
     padding: 10px;
@@ -286,9 +286,44 @@ ul {
 #search-button:hover {
     background-color: #549746;
 }
+/*estilo de tarjetas de recetas*/
+#receta-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
 
+.recipe {
+    background-color: #dbf6d4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.recipe h2 {
+    font-size: 16px;
+    color: #333;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 10px;
+}
 
+.recipe img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border:5px solid #6CBA59;
+}
+
+.recipe p {
+    margin: 0;
+    color: #FF9B9D;
+}
+
+/* estilo boton para añadir a favoritos*/
 .favorite-button {
     background: none;
     border: none;
@@ -300,6 +335,8 @@ ul {
     width: 24px;
     height: 24px;
   }
+
+/*estilos bloque de receta del dia*/  
 .recipe-day{
     
     margin: 10px 100px;
@@ -315,6 +352,7 @@ ul {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
     background-size: 200% 100%;
     }
+/*estilo mostrar fecha*/    
 #dateDisplay {
         display: block;
         font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -346,7 +384,7 @@ ul {
 .list-group-item{
     font-size: 14px;
 }
-
+/*estilo de footer*/
 footer {
     color: #fff;
     text-align: center;
@@ -364,10 +402,6 @@ footer p {
     
     flex-wrap: wrap;
     padding: 10px;
-    
-
-
-
 }
 
 #newsletter1{

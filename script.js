@@ -139,23 +139,23 @@ goOutBtn.addEventListener("click", () => {
 
 const dateDisplay = document.getElementById('dateDisplay');
 
-// Days of the week and months in English
+
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-// Get the current date
+// obtener la fecha actualizada
 const currentDate = new Date();
 
-// Get the date components
+// dia de la semana, dia, mes y año
 const dayOfWeek = daysOfWeek[currentDate.getDay()];
 const day = currentDate.getDate();
 const month = months[currentDate.getMonth()];
 const year = currentDate.getFullYear();
 
-// Format the date
+// Formato de presentacion
 const formattedDate = `${dayOfWeek}, ${month} ${day}, ${year}`;
 
-// Display the date on the page
+// Display para velo en la pagina
 dateDisplay.textContent = formattedDate;
 
 

@@ -4,18 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Obtener las recetas favoritas desde el almacenamiento local
   const favoriteRecipes = localStorage.getItem('favoriteRecipes');
+  //Si hay recetas guardadas, las convierte desde su representación JSON a un array utilizando(si no ,sera array vacio)
   const parsedFavorites = favoriteRecipes ? JSON.parse(favoriteRecipes) : [];
 
   // Crear las tarjetas interactivas para cada receta favorita
+  // recorremos el array de favoritas y crea una tarjeta para la receta
   parsedFavorites.forEach(recipe => {
     const card = createCard(recipe);
-    favoritesContainer.appendChild(card);
+    favoritesContainer.appendChild(card);   //agregamos cada tarjeta creada al contenedor
   });
 
   // Asignar el controlador de eventos al botón de eliminar todas las recetas favoritas
   deleteAllButton.addEventListener('click', removeFavoritesConfirmation);
 
-
+//esta funcion recibe una recceta como argumento y crea una tarjeta para esa receta
   function createCard(recipe) {
     const card = document.createElement('div');
     card.className = 'card';
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Asignar los detalles de la receta al atributo "title"
     card.title = `Health Score: ${recipe.healthScore}\nDiets: ${recipe.diets.join(', ')}`;
-
+//cada tarjeta contiene imagen titulo y boton eliminar
     card.innerHTML = `
       <img src="${recipe.image}" alt="${recipe.title}" />
       <div class="card-content">
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `;
 
-    // Hacer la tarjeta interactiva y arrastrable
+    
     makeInteractive(card);
 
     // Agregar controladores de eventos a los botones
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
-  // Función para hacer las tarjetas interactivas y arrastrables
+  // Función para hacer las tarjetas interactivas y arrastrables  (aun esta pendiente de adaptar)
   function makeInteractive(element) {
     let isDragging = false;
     let initialX, initialY;

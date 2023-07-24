@@ -1,89 +1,89 @@
-    body {
+body {
           
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 40px;
-          background-color: #FFE29B;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #FFE29B;
          
     }
-    
-    
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+   
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 20px;
     }
     
-      .card {
+.card {
              
-             width: 350px;
-             height: auto;
-             background-image: url("images/pink-flowerFav.jpg");
-             background-size: cover;
-             background-repeat: no-repeat;
-             background-position: center center;
-             padding: 40px;
+     width: 350px;
+     height: auto;
+     background-image: url("images/pink-flowerFav.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+     padding: 40px;
                          
-          }
-       h1{
-            font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: #AD3565;
-            font-size: 50px;
-            background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
-            background-size: cover;
-            background-repeat: no-repeat;
-            padding: 20px;
-            border-radius: 20px;
-            text-align: center;
-          }
-          .card-content {
-            margin: 0px 0px 2px 55px;
-            padding: 30px;
-            font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-            color:#AD3565;
+       }
+h1{
+     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+     color: #AD3565;
+     font-size: 50px;
+     background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 20px;
+     border-radius: 20px;
+     text-align: center;
+    }
+    
+.card-content {
+      margin: 0px 0px 2px 55px;
+      padding: 30px;
+      font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+     color:#AD3565;
                          
-          }
-          .card-content button {
-            background-color: #FEE49F;
-            border: 2px solid #744e0d;
-            border-radius: 20px;
-            width: 120px;
-            margin-left: 1px;
-            margin-bottom: 2px;
-          }
+     }
+.card-content button {
+      background-color: #FEE49F;
+      border: 2px solid #744e0d;
+      border-radius: 20px;
+      width: 120px;
+      margin-left: 1px;
+     margin-bottom: 2px;
+       }
      
-          .close-button {
-             position: absolute;
-             font-size: 20px;
-             color: #DE9108;
-             border: 2px solid #744e0d ;
-             top: 5px;
-             right: 5px;
-             background-color:#AD3565;
-             border-radius: 80px;
-             font-weight: bold;
-             cursor: pointer;
-          }
-          .card img {
-             max-width: 45%;
-             border-radius: 20px;
-             height: auto;
-             border: 3px solid pink;
+.close-button {
+      position: absolute;
+      font-size: 20px;
+      color: #DE9108;
+      border: 2px solid #744e0d ;
+      top: 5px;
+      right: 5px;
+      background-color:#AD3565;
+      border-radius: 80px;
+      font-weight: bold;
+      cursor: pointer;
+       }
+.card img {
+     max-width: 45%;
+     border-radius: 20px;
+     height: auto;
+     border: 3px solid pink;
               }
-         button  {
-            margin-bottom: 1px;
-            background-color: red;
-            width: 400px;
+button  {
+       margin-bottom: 1px;
+       background-color: red;
+      width: 400px;
          }
-         #delete-all-button {
-          display: block;
-          margin: 20px auto;
-          text-align: center;
-          background-color: pink;
-          color: rgb(141, 137, 137);
-          padding: 10px 20px;
-          border-radius: 5px;
-          cursor: pointer;
+#delete-all-button {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        background-color: pink;
+        color: rgb(141, 137, 137);
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
         }    
 
  

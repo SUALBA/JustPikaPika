@@ -107,13 +107,18 @@ document.addEventListener('DOMContentLoaded', function() {
           };
         });
     }
-
-    // Función para mezclar un array de manera aleatoria
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+//Algoritmo conocido como Fisher-Yates Shuffle o Knuth Shuffle, que garantiza una mezcla imparcial y uniforme de los elementos del array.
+    // Función para mezclar un array de manera aleatoria  (esto es para que no me salgan siempre las mismas recetas)
+    function shuffleArray(array) {     //funcion con 1 array, el q queremos mezclar
+      for (let i = array.length - 1; i > 0; i--) {    //el bucle for recorre el array de manera inversa
+        const j = Math.floor(Math.random() * (i + 1));  //en cada iteracion del bucle se genera un numero aleatorio "J" entre 0 y "i" inclusive.
+       //hasta aqui el objetivo es seleccionar aleatoriamente un indice del array q este dentro del rango de indices aun no mezclados
+        [array[i], array[j]] = [array[j], array[i]];   //realizamos un intercambio de elementos entre las posiciones  "i" y "j" del array .Se utiliza la tecnica del destructuring q permite cambiar valores entre 2 variables.Es decir, los valores en las posiciones i y j del array se intercambian de lugar.
       }
-      return array;
-    }
+      return array;   //el bucle continua hasta q todos los elementos hayan sido mezclados
+    }                 //Al final la funcion devuelve el array mezclado.
   });
+
+
+
+  //https://www.youtube.com/watch?v=4zx5bM2OcvA

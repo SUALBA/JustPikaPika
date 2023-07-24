@@ -1,6 +1,6 @@
 body {
   max-width: 1200px;
-  margin: 0 auto;
+  margin:  auto;
   padding: 20px;
   background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
   background-size: cover;
@@ -9,14 +9,23 @@ body {
   color: #333;   
 }
 
-#recipe-title {
-  background-color: #6CBA59;
-  border: 3px solid #FF9B9D;
+.card{
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 20px;
+
+  }
+
+#recipe-list {
+  margin-top: 50px;
+  background-color: #1a1919;
+  border: 3px solid #100f0f;
   border-radius: 5px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
-
+/*
 #ingredient-list {
   font-size: 16px;
   margin-bottom: 10px;
@@ -31,36 +40,29 @@ body {
   border-radius: 10px;
   border: 5px solid #6CBA59;
 }
+*/
 
-.card {
-  background-color: #6CBA59; /* Color de fondo predeterminado */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
 
 .card h2 {
   font-size: 16px;
-  color: #333;
+  color: #64335c;
   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-bottom: 10px;
 }
 
 .card img {
-  width: 100%;
-  max-height: 200px;
+  width: 99%;
+  height:90%; ;
   object-fit: cover;
   margin-bottom: 10px;
   border-radius: 10px;
-  border: 5px solid #6CBA59;
+  border: 3px solid #7f957a;
 }
 
 .card p {
-  margin: 0;
-  color: #FF9B9D;
+  font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 10px;
+  color: #1c1313;
 }
 
 .buttons {

@@ -30,14 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
       <img src="${recipe.image}" alt="${recipe.title}" />
       <div class="card-content">
         <h3>${recipe.title}</h3>
-        <p>${recipe.description}</p>
+        <p>${recipe.healthScore}</p>
         <button class="remove-button">Eliminar</button>
         <button class="remove-definitely-button" style="display: none;">Eliminar Definitivamente</button>
       </div>
     `;
+  
 
-    
-    makeInteractive(card);
 
     // Agregar controladores de eventos a los botones
     const removeButton = card.querySelector('.remove-button');
@@ -52,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
+    /*  pendiente de aplicar adaptada en una futura pagina, aqui la anulo porque da una imagen desordenada
+    makeInteractive(card);
   // Función para hacer las tarjetas interactivas y arrastrables  (aun esta pendiente de adaptar)
   function makeInteractive(element) {
     let isDragging = false;
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
       isDragging = false;
     }
   }
-
+*/
   // Función para mostrar una confirmación antes de eliminar la receta favorita
   function removeFavoriteConfirmation(event, recipeId) {
     event.stopPropagation(); // Detener la propagación del evento para evitar que se active el evento de eliminar la receta completa

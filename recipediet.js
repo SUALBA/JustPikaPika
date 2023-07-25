@@ -83,6 +83,30 @@ document.addEventListener('DOMContentLoaded', function() {
             readyInMinutes.textContent = 'Ready in ' + (recipe.readyInMinutes || 'N/A') + ' minutes';
             card.appendChild(readyInMinutes);
 
+            //mas datos que añado:
+              // Nuevos datos que se obtendrán de la API
+              const ingredients = document.createElement('p');
+              ingredients.textContent = 'Ingredients: ' + recipe.ingredients;
+              card.appendChild(ingredients);
+
+              const instructions = document.createElement('p');
+              instructions.textContent = 'Instructions: ' + recipe.instructions;
+              card.appendChild(instructions);
+
+              const healthScore = document.createElement('p');
+              healthScore.textContent = 'Health Score: ' + recipe.healthScore;
+              card.appendChild(healthScore);
+
+              const description = document.createElement('p');
+              description.textContent = 'Description: ' + recipe.description;
+              card.appendChild(description);
+
+              const diets = document.createElement('p');
+              diets.textContent = 'Diets: ' + recipe.diets;
+              card.appendChild(diets);
+
+              
+
             recipeList.appendChild(card);
           });
         })
@@ -104,6 +128,14 @@ document.addEventListener('DOMContentLoaded', function() {
             image: data.image,
             readyInMinutes: data.readyInMinutes,
             backgroundColor: backgroundColor, // Agregar el color de fondo del botón a cada receta
+            //nuevos datos
+              // Nuevos datos que se obtendrán de la API
+              ingredients: data.extendedIngredients.map(ingredient => ingredient.original).join(', '),
+              instructions: data.instructions,
+              healthScore: data.healthScore,
+              description: data.summary,
+              diets: data.diets.join(', '),
+             
           };
         });
     }

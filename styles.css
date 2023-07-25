@@ -155,7 +155,7 @@ h1{
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 10px;
-    flex-wrap: wrap;
+    
   }
   
   .photo {
@@ -181,12 +181,13 @@ h1{
     background-color: #f5d9d9;
     margin-bottom: 20px;
     
+    
   }
   
 .ingredientes {
     cursor: pointer;
-    text-align: center;
-    margin: 10px 85px;
+    
+    margin: 10px 40px;
     flex: 1;
     padding: 5px;
     border: 5px solid rgb(169, 163, 163);
@@ -402,6 +403,10 @@ footer p {
     
     flex-wrap: wrap;
     padding: 10px;
+}
+
+.visually-hidden{
+    width: 20px;
 }
 
 #newsletter1{

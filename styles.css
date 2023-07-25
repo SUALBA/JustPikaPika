@@ -392,7 +392,7 @@ footer {
     padding: 0px;
     border: 5px solid #daa9aa;
     border-radius: 10px;
-    height: 500px;
+    height: 550px;
 }
 
 footer p {
@@ -404,12 +404,16 @@ footer p {
     flex-wrap: wrap;
     padding: 10px;
 }
+footer .button{
+    width: 80px;
+    font-size: 12px;
+    border-radius: 5px;
 
-.visually-hidden{
-    width: 20px;
 }
+
 
 #newsletter1{
     background-color:#daa9aa ;
-    width: 280px;
+    width: 150px;
+    font-size: 14px;
 }

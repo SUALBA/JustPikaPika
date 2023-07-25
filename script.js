@@ -109,9 +109,10 @@ goOutBtn.addEventListener("click", () => {
             let image = document.createElement("img");
             image.src = recipe.image;
 
-            let readyInMinutes = document.createElement("p");
-            readyInMinutes.textContent = "Ready in " + recipe.readyInMinutes + " minutes";
+            let readyInMinutes = document.createElement('p');
+            readyInMinutes.textContent = 'Ready in ' + (recipe.readyInMinutes || 'N/A') + ' minutes';
 
+                    
             recipeDiv.appendChild(title);
             recipeDiv.appendChild(image);
             recipeDiv.appendChild(readyInMinutes);

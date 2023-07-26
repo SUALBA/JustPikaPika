@@ -66,6 +66,15 @@ body {
   border: 2px solid silver;
   
 }
+.card ol {
+  font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 10px;
+  color: #1c1313;
+  border: 2px solid silver;
+  
+}
+
+
 
 .buttons {
   display: flex;

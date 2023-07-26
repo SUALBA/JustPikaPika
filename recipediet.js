@@ -89,8 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
               ingredients.textContent = 'Ingredients: ' + recipe.ingredients;
               card.appendChild(ingredients);
 
-              const instructions = document.createElement('p');
-              instructions.textContent = 'Instructions: ' + recipe.instructions;
+              const instructions = document.createElement('ol');
+              // Aplicar la función removeUnwantedHTMLTags para quitar etiquetas innecesarias en las instrucciones
+              instructions.innerHTML = removeUnwantedHTMLTags(recipe.instructions); // Usamos innerHTML para conservar las etiquetas <li>
               card.appendChild(instructions);
 
               const healthScore = document.createElement('p');
@@ -98,7 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
               card.appendChild(healthScore);
 
               const description = document.createElement('p');
-              description.textContent = 'Description: ' + recipe.description;
+              // Aplicar la función removeUnwantedHTMLTags para quitar etiquetas innecesarias en la descripción
+              description.textContent = 'Description: ' + removeUnwantedHTMLTags(recipe.description);
               card.appendChild(description);
 
               const diets = document.createElement('p');
@@ -115,6 +117,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Función para eliminar etiquetas HTML innecesarias 
+function removeUnwantedHTMLTags(text) {
+  const tempElement = document.createElement('div');
+  tempElement.innerHTML = text;
+
+  // Eliminar etiquetas <ol>, <li> y <span>
+  tempElement.querySelectorAll('ol, li, span').forEach(node => node.remove());
+
+  // Convertir etiquetas <b> <a>a texto plano
+  tempElement.querySelectorAll('a, b').forEach(tag => {
+    const tagText = tag.textContent;
+    tag.outerHTML = tagText;
+  });
+
+  return tempElement.innerHTML.trim();
+}
     function getRecipeInformation(recipeId, backgroundColor) {
       const apiKey = 'aac38ef2db854c74b8b9f59ac48acbf6';
       const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=false`;

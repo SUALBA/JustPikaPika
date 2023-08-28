@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="card-content">
         <h3>${recipe.title}</h3>
         <p>${recipe.healthScore}</p>
-        <button class="remove-button">Eliminar</button>
-        <button class="remove-definitely-button" style="display: none;">Eliminar Definitivamente</button>
+        <button class="remove-button">delete</button>
+        <button class="remove-definitely-button" style="display: none;">delete finally</button>
       </div>
     `;
   
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function removeFavoriteConfirmation(event, recipeId) {
     event.stopPropagation(); // Detener la propagación del evento para evitar que se active el evento de eliminar la receta completa
 
-    const confirmDelete = confirm('¿Estás seguro de que deseas eliminar esta receta favorita?');
+    const confirmDelete = confirm('Are you sure to want to delete this recipe?');
 
     if (confirmDelete) {
       const cardContent = event.target.closest('.card-content');
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
    // Función para mostrar una confirmación antes de eliminar todas las recetas favoritas
   function removeFavoritesConfirmation() {
-    const confirmDelete = confirm('¿Estás seguro de que deseas eliminar todas las recetas favoritas?');
+    const confirmDelete = confirm('Are you sure to want to delete this recipes?');
 
     if (confirmDelete) {
       favoritesContainer.innerHTML = ''; // Eliminar todas las tarjetas de recetas favoritas

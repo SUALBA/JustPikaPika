@@ -23,11 +23,10 @@ body {
     font-size: 48px;
     color: #91D975;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(to right, #FF9B9D, #FAC4C8);
     display: inline-block;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
     background-size: 200% 100%;
     animation: gradientAnimation 40s ease infinite;
 }
@@ -70,7 +69,7 @@ h2 {
   }
 /*estilo de la barra de navegación*/
 nav {
-    background-color: #91D975;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.4);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -186,11 +185,9 @@ h1{
   
 .ingredientes {
     cursor: pointer;
-    
     margin: 10px 40px;
     flex: 1;
     padding: 5px;
-    border: 5px solid rgb(169, 163, 163);
     border-radius: 10px;
 }
 
@@ -211,7 +208,7 @@ h1{
 
 .lista-ampliada li {
     width: 400px;
-    background-color: #f5d9d9;
+    
     text-align:center;
     list-style-type: none;
     margin-left: 80px;
@@ -316,7 +313,7 @@ ul {
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 10px;
-    border:5px solid #6CBA59;
+    
 }
 
 .recipe p {
@@ -346,7 +343,7 @@ ul {
     font-size: 23px;
     color: #5a834a;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(to right, #FF9B9D, #FAC4C8);
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
     display: inline-block;
     padding: 10px;
     border-radius: 10px;
@@ -376,9 +373,8 @@ ul {
     margin-top: 20px;
     color:#198754;
     font-size: 16px;
-    background-color: #4dff36;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    border: 5px solid seagreen;
     padding: 10px;
     
 }
@@ -390,7 +386,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 0px;
-    border: 5px solid #daa9aa;
     border-radius: 10px;
     height: 550px;
 }

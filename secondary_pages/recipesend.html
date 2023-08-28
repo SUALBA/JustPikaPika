@@ -6,18 +6,22 @@
     <title>Recipe Form</title>
     
     <style>
-        body {
+     /*   body {
            
             background-image: url(https://img.freepik.com/free-vector/spring-floral-watercolor-background-vector-green-with-leaf-illustration_53876-126350.jpg?w=740&t=st=1686032459~exp=1686033059~hmac=22dd755dc6d4f6490c601362832d3a3298a308d52b75abf91a5cf48274f531ad);
             background-repeat: no repeat;
             background-position-x: center;
             background-position-y: center;
             background-size:auto ;
-        }
+        }   
         #recipe-form{
             background-color: rgb(201, 237, 148);
-        }
+        } */
         
+        body {
+    
+            background-color: #cce1c4;
+        }
         #sharerecipe {
             font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
             margin: 10px auto;
@@ -27,7 +31,7 @@
             max-width: 700px;
             box-sizing: border-box;
             border-radius: 10px;
-            border: 13px solid #9fe581;
+            
             background-color: #cce1c4;
             color:#654c4d;
         }
@@ -77,11 +81,10 @@
 <body>
   
     <a href="../index.html">Go to home page</a>
-   <br><iframe src="https://gifer.com/embed/3vmG" width=96 height=72 frameBorder="0" allowFullScreen></iframe>
-  
+   
     <div id="contain">
     <div id="sharerecipe">
-        <h1> 🌟 Share your recipes   </h1>
+        <h1>Share your recipes   </h1>
     <!--he utilizado la API Formsubmit para recibir los datos que se envien de este formulario en mi email -->
     <form action="https://formsubmit.co/2a8b875d492fba60c648bb983b4d6332" method="POST" id="recipe-form"> 
       <input type="hidden" name="_formsubmit_id" value="2a8b875d492fba60c648bb983b4d6332">
@@ -109,7 +112,7 @@
       <button class="btn btn-success-border-subtle" id="my-form-button ">Agree and send</button>
       
       <div class="mensaje-emergente" id="mensaje"><strong>
-        ˚ ༘♡ ⋆｡˚Thanks for sharing something so delicious!! ˚ ༘♡ ⋆｡˚
+        ˚  ⋆｡˚Thanks for sharing something so delicious!! ˚  ⋆｡˚
       </strong></div>
 <!--He utilizado la plataforma NETLIFY para alojar mi web y desplegar la aplicacion-->
       <input type="hidden" name="_next" value="https://zippy-strudel-67b0fd.netlify.app/"> 
